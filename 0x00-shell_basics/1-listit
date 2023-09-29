@@ -1,1 +1,2 @@
-The command to list the contents of the current diretory is "ls".
+#!/bin/bash
+ls
