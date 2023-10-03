@@ -1,0 +1,2 @@
+#!/bash/bin
+echo $(($WATER#bestchol + $STIR#bestchol))#bestchol
