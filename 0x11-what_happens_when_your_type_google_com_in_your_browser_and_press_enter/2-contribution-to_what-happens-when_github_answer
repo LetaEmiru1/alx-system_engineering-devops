@@ -1,0 +1,26 @@
+To submit a pull request to the "what-happens-when" repository on GitHub, follow these steps:
+
+Fork the Repository: Go to the what-happens-when repository and fork it to your GitHub account.
+Clone the Forked Repository: Clone the forked repository to your local machine using:
+sh
+git clone https://github.com/YOUR_USERNAME/what-happens-when.git
+Create a New Branch: Create a new branch for your contribution:
+sh
+git checkout -b add-request-flow-schema
+Add Your Contribution: Add your blog post and schema illustration to the relevant section in the repository. You might create a new file or update an existing one.
+Commit Your Changes: Commit your changes with a meaningful message:
+sh
+git add .
+git commit -m "Add detailed explanation and schema for request flow"
+Push to GitHub: Push your changes to your forked repository:
+sh
+git push origin add-request-flow-schema
+Create a Pull Request: Go to your forked repository on GitHub and create a pull request to the original repository.
+
+
+
+
+
+
+
+

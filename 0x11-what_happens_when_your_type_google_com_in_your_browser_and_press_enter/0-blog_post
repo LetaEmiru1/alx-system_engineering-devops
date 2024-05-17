@@ -1,0 +1,27 @@
+What Happens When You Type https://www.google.com in Your Browser and Press Enter
+1. DNS Request
+When you type https://www.google.com and press Enter, the first step is to translate the human-readable domain name into an IP address that computers can understand. This is done through the Domain Name System (DNS). Your browser checks its cache to see if it has recently requested this URL. If not, it sends a DNS query to your local DNS server, which is typically provided by your Internet Service Provider (ISP). The DNS server then looks up the IP address associated with www.google.com and returns it to your browser.
+
+2. TCP/IP
+With the IP address in hand, your browser now needs to establish a connection to the server hosting the website. This is done using the Transmission Control Protocol (TCP) over the Internet Protocol (IP), collectively known as TCP/IP. Your browser initiates a TCP connection through a process called a three-way handshake. This involves your browser (client) sending a SYN (synchronize) packet to the server, the server responding with a SYN-ACK (synchronize-acknowledge) packet, and your browser sending back an ACK (acknowledge) packet. Once this handshake is complete, a connection is established.
+
+3. Firewall
+Firewalls are security systems designed to prevent unauthorized access to or from a private network. Both your computer and the web server you are trying to reach may have firewalls in place. As your request travels through the network, it passes through these firewalls. The firewalls inspect the data packets to ensure they meet certain security criteria and allow the request to proceed if they do.
+
+4. HTTPS/SSL
+The 's' in HTTPS stands for 'secure.' This means the data sent between your browser and the web server is encrypted using the Secure Sockets Layer (SSL) or its successor, Transport Layer Security (TLS). Your browser and the server perform an SSL handshake to establish a secure connection. This involves your browser verifying the server's SSL certificate (issued by a Certificate Authority), agreeing on an encryption method, and exchanging encryption keys to secure the data transmission.
+
+5. Load Balancer
+Once the secure connection is established, your request reaches the server. However, popular websites like Google don't rely on a single server. Instead, they use multiple servers to handle the high volume of traffic. A load balancer sits in front of these servers and distributes incoming requests to the servers to ensure no single server is overwhelmed. The load balancer uses various algorithms (e.g., round-robin, least connections) to distribute the traffic efficiently.
+
+6. Web Server
+The load balancer forwards your request to one of the web servers. The web server is responsible for handling HTTP requests. It processes the request and serves static content (like HTML, CSS, JavaScript files, images) directly. If the request requires dynamic content (e.g., user-specific data), the web server forwards it to an application server.
+
+7. Application Server
+The application server executes the business logic of the web application. For example, it might handle user authentication, data processing, and interactions with other services. It uses the information from your request to generate the appropriate response. This might involve querying a database or calling external APIs to retrieve data needed to fulfill the request.
+
+8. Database
+If the request requires data stored in a database (e.g., retrieving user-specific information), the application server queries the database. The database management system (DBMS) handles these queries, retrieving and returning the requested data to the application server. Popular databases include MySQL, PostgreSQL, and MongoDB. The application server then uses this data to construct the response.
+
+Conclusion
+The journey of your request from typing https://www.google.com to receiving the desired webpage involves multiple components working together seamlessly. Understanding this process is crucial for software engineers, as it highlights the complexities of web technologies and the importance of each component in delivering a smooth user experience.
