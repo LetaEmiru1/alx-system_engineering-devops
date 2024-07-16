@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Define the server address
+SERVER_ADDRESS="8.8.8.8"
+
+# Define the user
+USER="ubuntu"
+
+# Define the path to the private key
+PRIVATE_KEY_PATH="~/.ssh/school"
+
+# Connect to the server using ssh with the private key
+ssh -i $PRIVATE_KEY_PATH -o StrictHostKeyChecking=no $USER@$SERVER_ADDRESS
+
